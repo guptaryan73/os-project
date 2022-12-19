@@ -30,12 +30,12 @@ int main(void)
 {
     int i = 0;
     int error;
-  
+
     if (pthread_mutex_init(&lock, NULL) != 0) {
         printf("\n mutex init has failed\n");
         return 1;
     }
-  
+
     while (i < 2) {
         error = pthread_create(&(tid[i]),
                                NULL,
